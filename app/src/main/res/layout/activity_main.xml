@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Spinner
+        android:entries="@array/courseDate"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp_courseDate"/>
+    <EditText
+        android:layout_below="@+id/sp_courseDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入班级"
+        android:id="@+id/et_studentClass"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:overScrollMode="never"
+        android:layout_below="@id/et_studentClass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/over_student"/>
+
+    <com.nightonke.boommenu.BoomMenuButton
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:bmb_buttonEnum="textOutsideCircle"
+        app:bmb_piecePlaceEnum="piecePlace_dot_3_1"
+        app:bmb_buttonPlaceEnum="buttonPlace_sc_3_1"
+        app:bmb_boomInWholeScreen="false"
+        />
+</RelativeLayout>
